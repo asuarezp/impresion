@@ -1,0 +1,129 @@
+<link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
+<link rel="stylesheet" href="css/fontello.css">
+<link rel="stylesheet" href="css/template.css">
+
+<div id="content">
+    <h3>Solicitud de cr&eacute;dito</h3><hr>
+
+    <table class="table-striped table-bordered">
+        <tr>
+            <th style="width: 300px;height: 35px;">Nombre</th>
+            <th style="width: 300px;height: 35px;text-align: center;">Fecha de nacimiento</th>
+            <th style="width: 300px;height: 35px;text-align: center;">Genero</th>
+        </tr>
+        <tr ng-repeat="item in clients">
+            <td style="width: 300px;height: 35px;">{{item.name}}</td>
+            <td style="width: 300px;height: 35px;text-align: center;">{{item.dateOfBirth | date: 'MMMM dd, yyyy' | capitalize}}</td>
+            <td style="width: 300px;height: 35px;text-align: center;">{{item.gender}}</td>
+        </tr>
+    </table>
+    <br>
+    <p align="justify">
+        Quito, a las quince horas con treinta y tres minutos del
+        <strong>{{clients[1].dateOfBirth | date: 'short'}}</strong>, ante mí, Justiniano Justo Leal Juez quinto del registro Civil, comparecen
+        los señores
+        <strong>{{clients[0].name}}</strong> y
+        <strong>{{clients[1].name}}</strong> quienes bajo protesta de decir verdad, dijeron llamarse como quedó escrito y expresaron
+        que es su voluntad unirse en matrimonio, bajo el régimen de Bienes separados de acuerdo a la solicitud y documentos que
+        presentaron en este Juzgado del Registro Civil a mi cargo, con fecha
+        <strong>{{clients[0].dateOfBirth | date: 'short'}}</strong>, los mismos en que están anotados los siguientes datos:
+    </p>
+    
+    <h4>El contrayente</h4>
+    <ul>
+        <li>
+            <strong>Nombre:</strong> {{clients[0].name}}</li>
+        <li>
+            <strong>Fecha de nacimiento:</strong> {{clients[0].dateOfBirth | date: 'MMMM dd, yyyy' | capitalize}}</li>
+        <li>
+            <strong>G&eacute;nero</strong> {{clients[0].gender}}</li>
+    </ul>
+    <br>
+    <h4>La contrayente</h4>
+    <ul>
+        <li>
+            <strong>Nombre:</strong> {{clients[1].name}}</li>
+        <li>
+            <strong>Fecha de nacimiento:</strong> {{clients[1].dateOfBirth | date: 'MMMM dd, yyyy' | capitalize}}</li>
+        <li>
+            <strong>G&eacute;nero</strong> {{clients[1].gender}}</li>
+    </ul>
+    <br>
+    
+    <div class="row">
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header bg-success texto">El contrayente</div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="icon-eye"></i>
+                            </span>    
+                            <strong>Nombre:</strong> {{clients[3].name}}
+                        </li>
+                        <li>
+                            <span>
+                                <i class="icon-money"></i>
+                            </span>    
+                            <strong>Fecha de nacimiento:</strong> {{clients[3].dateOfBirth | date: 'MMMM dd, yyyy' | capitalize}}
+                        </li>
+                        <li>
+                            <span>
+                                <i class="icon-bell"></i>
+                            </span>  
+                            <strong>G&eacute;nero</strong> {{clients[3].gender}}  
+                        </li>                            
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="col-6">
+            <div class="card">
+                <div class="card-header bg-success texto">La contrayente</div>
+                <div class="card-body">
+                    <ul>
+                        <li>
+                            <span>
+                                <i class="icon-eye"></i>
+                            </span>
+    
+                            <strong>Nombre:</strong> {{clients[2].name}}
+                        </li>
+                        <li>
+                            <span>
+                                <i class="icon-money"></i>
+                            </span>
+                            <strong>Fecha de nacimiento:</strong> {{clients[2].dateOfBirth | date: 'MMMM dd, yyyy' | capitalize}}
+                        </li>
+                        <li>
+                            <span>
+                                <i class="icon-bell"></i>
+                            </span>
+    
+                            <strong>G&eacute;nero:</strong> {{clients[2].gender}}
+                        </li>
+                    </ul>
+    
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <br>
+    <table class="table table-striped table-bordered">
+        <tr>
+            <th>Nombre</th>
+            <th>Fecha de nacimiento</th>
+            <th>Genero</th>
+        </tr>
+        <tr ng-repeat="item in clients">
+            <td>{{item.name}}</td>
+            <td>{{item.dateOfBirth | date: 'MMMM dd, yyyy' | capitalize}}</td>
+            <td>{{item.gender}}</td>
+        </tr>
+    </table>    
+</div>
+<script src="lib/popper.js/dist/umd/popper.min.js"></script>
+<script src="lib/jquery/dist/jquery.min.js"></script>
+<script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>

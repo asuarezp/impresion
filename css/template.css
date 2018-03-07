@@ -1,0 +1,82 @@
+body {
+    font-size: 1em;
+}
+
+table {
+    font-size: 1em;
+}
+
+#cabecera {
+    color: white;
+    font-weight: bold;
+}
+
+.texto {
+    color: white;
+    font-weight: bold;
+}
+
+ul li {
+    list-style: none;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    color: #ccc;
+    background-color: #ccc;
+}
+
+#content {
+    page-break-inside: auto;
+    page-break-after: auto;
+}
+
+.formato {
+    width: 300px;
+    height: 10px;
+}
+
+h5 {
+    text-decoration: underline;
+}
+
+.row .col:last-child {
+    text-align: center;
+}
+
+#documento p {
+    text-align: justify;
+}
+
+#documento p:first-child:first-letter {
+    color: #903;
+    float: left;
+    font-family: Georgia;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }
+
+
+/*
+#documento p:first-child:first-letter {
+    color: #903;
+    font-family: Georgia;
+    initial-letter: 2;
+}
+*/
+/*
+.firstcharacter {
+    color: #903;
+    float: left;
+    font-family: Georgia;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+}
+*/
