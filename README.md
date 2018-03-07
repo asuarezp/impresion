@@ -1,0 +1,1 @@
+Componente para la impresión de reportes e informes 
