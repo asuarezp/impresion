@@ -2,7 +2,7 @@
     "clients": [
         {"name": "Pedro Perez", "dateOfBirth": "1971-04-21", "gender": "M", "documento": "templates/solicitud.html"},
         {"name": "Sandra Alpizar", "dateOfBirth": "1966-03-14", "gender": "F", "documento": "templates/devolucion.html"},
-        {"name": "Alejandra Guzmán", "dateOfBirth": "2002-03-15", "gender": "F", "documento": "solicitud.html"},
+        {"name": "Alejandra Guzmán", "dateOfBirth": "2002-03-15", "gender": "F", "documento": "templates/tabular.html"},
         {"name": "Rolando Rodríguez", "dateOfBirth": "1985-12-06", "gender": "M", "documento": "solicitud.html"},
         {"name": "Francisco León", "dateOfBirth": "1992-08-15", "gender": "M", "documento": "solicitud.html"},
         {"name": "Maria Jose Lopez", "dateOfBirth": "1998-10-20", "gender": "F", "documento": "solicitud.html"}

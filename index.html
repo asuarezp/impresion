@@ -37,8 +37,15 @@
                         <td>{{datos.clients[2].dateOfBirth | date:'MMMM dd, yyyy' | capitalize}}</td>
                         <td>Saludo al mundo</td>
                         <td style="text-align: center"><img style="cursor:pointer" width="32px" height="32px" ng-src="images/print.png" ng-click="printer.process(datos.clients[1].documento)"</td>
-                    </tr>
-                        
+                    </tr>                        
+                    <tr>
+                        <td>Reporte de solicitud de credito</td>
+                        <td>Solicitud de crédito</td>
+                        <td>{{datos.clients[3].dateOfBirth | date:'MMMM dd, yyyy' | capitalize}}</td>
+                        <td>Cooperativa</td>
+                        <td style="text-align: center"><img style="cursor:pointer" width="32px" height="32px" ng-src="images/print.png" ng-click="printer.process(datos.clients[2].documento)"</td>
+                    </tr>                        
+                    
                 </tbody>
             </table>
         </form>        

@@ -1,0 +1,26 @@
+body {
+    font-size: 10px;
+}
+
+#cuerpo .row .col {
+    height: 30px;
+    border: 1px solid black;
+    padding: 0;
+}
+
+.rotulo {
+    font-weight: bold;
+}
+
+.edicion {
+    background-color: #ddf;
+}
+
+#titulo {
+    font-weight: bold;
+    background-color: #eef;
+}
+
+#logo {
+    text-align: right;
+}
