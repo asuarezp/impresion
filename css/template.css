@@ -1,9 +1,10 @@
 body {
-    font-size: 1em;
+    font-size: 0.7em;
 }
 
 table {
     font-size: 1em;
+    width: 1000px;
 }
 
 #cabecera {
@@ -41,15 +42,19 @@ h5 {
     text-decoration: underline;
 }
 
+.row .col {
+    border: 1px solid black;
+}
+
 .row .col:last-child {
     text-align: center;
 }
 
-#documento p {
+p {
     text-align: justify;
 }
 
-#documento p:first-child:first-letter {
+p:first-child:first-letter {
     color: #903;
     float: left;
     font-family: Georgia;
@@ -60,23 +65,97 @@ h5 {
     padding-left: 3px;
   }
 
+.valor {
+    background-color: aquamarine;
+}
 
-/*
-#documento p:first-child:first-letter {
-    color: #903;
-    font-family: Georgia;
-    initial-letter: 2;
+.rotulo {
+    background-color: #555;
+    color: white;
+    font-weight: bold;
+    margin-top: 5px;
+    margin-bottom: 5px;
 }
-*/
-/*
-.firstcharacter {
-    color: #903;
-    float: left;
-    font-family: Georgia;
-    font-size: 75px;
-    line-height: 60px;
-    padding-top: 4px;
-    padding-right: 8px;
-    padding-left: 3px;
+.titulo {
+    font-weight: bold;
 }
-*/
+
+.alineacion {
+    text-align: right;
+}
+
+.alto {
+    height: 26px;
+}
+
+.ultimo_alto {
+    height: 30px;
+}
+
+.centrar {
+    display: block;
+    text-align: center;
+}
+
+.doble {
+    height: 36px;
+}
+
+.derecha {
+    text-align: right;
+}
+
+.total {
+    background-color: #ccc;
+}
+
+.croquis {
+    height: 290px;
+}
+
+@media print {
+    h6 {
+        page-break-before: always;
+    }
+
+    div {
+        page-break-inside: avoid;
+    }
+
+    p {
+        orphans: 3;
+        widows: 3;
+    }
+}
+
+#finanzas {
+    margin-top: 13px;
+}
+
+.especial {
+    height: 50px;
+}
+
+.letras {
+    font-size: 8px;
+}
+
+.letras-nueve {
+    font-size: 10px;
+}
+
+.ancho {
+    width: 200px;
+}
+
+.ancho-vacio {
+    width: 80px;
+}
+
+.ancho-rotulo {
+    width: 200px;
+}
+
+.ancho-rotulo-especial {
+    width: 80px;
+}

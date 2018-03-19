@@ -24,3 +24,18 @@ body {
 #logo {
     text-align: right;
 }
+
+#documento p {
+    text-align: justify;
+}
+
+#documento p:first-child:first-letter {
+    color: #903;
+    float: left;
+    font-family: Georgia;
+    font-size: 75px;
+    line-height: 60px;
+    padding-top: 4px;
+    padding-right: 8px;
+    padding-left: 3px;
+  }

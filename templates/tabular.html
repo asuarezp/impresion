@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html ng-app="app">
 
 <head>
     <meta charset="UTF-8">
@@ -7,78 +7,1078 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="lib/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="css/fontello.css">
-    <link rel="stylesheet" href="css/tabular.css">
-    <title>Document</title>
+    <link rel="stylesheet" href="css/template.css">
+    <title>External template</title>
 </head>
 
-<body>
-
-    <div class="row">
-        <div class="col">
-            <h4>SOLICITUD DE CREDITO</h4>
-        </div>
-        <div id="logo" class="col">
-            <img width="50%" src="images/coop.png">
-        </div>
-    </div>
-    <br>
-    <p>La información proporcionada por este documento es de estricta confidencialidad, misma que será utilizada por la institución
-        financiera cuando se lo considere pertinente.</p>
-    <div id="cuerpo" class="container-fluid">
-        <div class="row mt-3">
-            <div class="col rotulo">Lugar y fecha:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Monto solicitado:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Plazo:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Asesor comercial:</div>
-            <div class="col edicion"></div>
-        </div>
-        <div class="row">
-            <div class="col rotulo">Destino del crédito:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Número de cuenta:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Número de socio:</div>
-            <div class="col edicion"></div>
-        </div>
-        <div class="row">
-            <div class="col rotulo">Provincia:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Cantón:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Parroquia:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Sector:</div>
-            <div class="col edicion"></div>
-            <div class="col rotulo">Ciudad:</div>
-            <div class="col edicion"></div>
-        </div>
-        <div id="titulo" class="row rotulo">
-            1. DATOS BÁSICOS DEL SOLICITANTE
-        </div>
-        <div class="row">
-            <div class="col-4">
-                <div class="row">
-                    <div class="col">Hola mundo</div>
+<body ng-controller="mainCtrl as printer">
+    <div class="container">
+        <form novalidate ng-submit="printer.imprimir()">
+            <div class="row">
+                <div class="col-4 pt-4">
+                    <h6>SOLICITUD DE CRÉDITO</h6>
                 </div>
-                <div class="row">
-                    <div class="col">Que tal</div>
+                <div class="col-4"></div>
+                <div class="col-4 derecha">
+                    <img width="115" height="73" src="images/logo.png">
                 </div>
             </div>
-            <div class="col col-4 h-4">
-                Hola
-            </div>
-            <div class="col col-4 h-4">
-                Mundo
-            </div>
-        </div>
-    </div>
 
-    <script src="lib/popper.js/dist/umd/popper.min.js"></script>
-    <script src="lib/jquery/dist/jquery.min.js"></script>
-    <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+            <p>La información proporcionada en este documento es de estricta confidencialidad, misma que será utilizada por
+                la Cooperativa cuando se lo considere pertinente.</p>
+
+            <div class="row">
+                <div class="col titulo">Lugar y fecha:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Monto Solicitado:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Plazo:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Asesor comercial:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Destino del credito:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Número de cuenta:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Número de socio:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Provincia:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Cantón:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Sector:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Ciudad:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Parroquia:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col col-3 titulo">Periodicidad de Pago:</div>
+                <div class="col col-9">
+                    <div class="row">
+                        <div class="col-1">
+                            Días:
+                        </div>
+                        <div class="col-11">
+                            <div class="row valor">
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">30</label>
+                                </div>
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">60</label>
+                                </div>
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">90</label>
+                                </div>
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">120</label>
+                                </div>
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">180</label>
+                                </div>
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">270</label>
+                                </div>
+                                <div class="col-1">
+                                    <label>
+                                        <input type="checkbox">360</label>
+                                </div>
+                                <div class="col-2">
+                                    <label>
+                                        <input type="checkbox">Al vencimiento</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rotulo mt-2">
+                <h6>1. DATOS BÁSICOS DEL SOLICITANTE</h6>
+            </div>
+            <div class="row">
+                <div class="col-4">
+                    <div class="row">
+                        <div class="col titulo">Nombres y Apellidos/Razón Social/Nombre Comercial</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">Nombre</div>
+                    </div>
+                </div>
+                <div class="col col-5">
+                    <div class="row">
+                        <div class="col-3 titulo">Tipo ID:</div>
+                        <div class="col-9">
+                            <div class="row">
+                                <div class="col-4">
+                                    <label>
+                                        <input type="checkbox" checked>Cédula</label>
+                                </div>
+                                <div class="col-5">
+                                    <label>
+                                        <input type="checkbox">Pasaporte</label>
+                                </div>
+                                <div class="col-3">
+                                    <label>
+                                        <input type="checkbox">RUC</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-3">
+                    <div class="row">
+                        <div class="col titulo">Nombre de Identificación</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">Identificación</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Nacionalidad:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Lugar y Fecha de Nacimiento:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Edad:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col col-1 titulo">Estado Civil:</div>
+                <div class="col col-5 valor">
+                    <label>
+                        <input type="checkbox">Soltero</label>
+                    <label>
+                        <input type="checkbox">Casado</label>
+                    <label>
+                        <input type="checkbox">Viudo</label>
+                    <label>
+                        <input type="checkbox">Unión de hecho</label>
+                    <label>
+                        <input type="checkbox">Divorciado</label>
+                    <label>
+                        <input type="checkbox">Separado</label>
+                </div>
+                <div class="col col-1 titulo">Sexo:</div>
+                <div class="col col-2 valor">
+                    <label>
+                        <input type="checkbox">Masculino</label>
+                    <label>
+                        <input type="checkbox">Femenino</label>
+                </div>
+                <div class="col col-1 titulo">Cargas Familiares</div>
+                <div class="col col-2 valor"></div>
+            </div>
+            <div class="row">
+                <div class="col col-2 titulo">Nivel de Educación:</div>
+                <div class="col col-5 valor">
+                    <label>
+                        <input type="checkbox">Primaria</label>
+                    <label>
+                        <input type="checkbox">Secundaria</label>
+                    <label>
+                        <input type="checkbox">Técnica</label>
+                    <label>
+                        <input type="checkbox">Superior</label>
+                    <label>
+                        <input type="checkbox">Postgrado</label>
+                    <label>
+                        <input type="checkbox">Doctorado</label>
+                    <label>
+                        <input type="checkbox">Ninguna</label>
+                </div>
+                <div class="col col-2 titulo">Separación de Bienes:</div>
+                <div class="col col-3 valor">
+                    <label>
+                        <input type="checkbox">Si</label>
+                    <label>
+                        <input type="checkbox">No</label>
+                </div>
+            </div>
+            <div class="row rotulo mt-2">
+                <h6>2. INFORMACIÓN DEL DOMICILIO</h6>
+            </div>
+            <div class="row">
+                <div class="col col-3">
+                    <div class="row">
+                        <div class="col titulo">Provincia:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Cantón:</div>
+                        <div class="col valor"></div>
+                    </div>
+                </div>
+                <div class="col col-5 titulo">Dirección (Calle principal, numeración, calle secundaria, edificio, piso)</div>
+                <div class="col col-4 valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Ciudad:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Teléfono(s) de Domicilio:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Parroquia:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">E-mail:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Celular:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Sector:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">País de Residencia:</div>
+                <div class="col valor"></div>
+                <div class="col valor">
+                    <label>
+                        <input type="checkbox">Claro</label>
+                    <label>
+                        <input type="checkbox">Movistar</label>
+                    <label>
+                        <input type="checkbox">CNT</label>
+                </div>
+            </div>
+            
+            <div class="row mt-2">
+                <table border="2">
+                    <tr>
+                        <td class="titulo ancho-rotulo-especial">Tipo de Vivienda</td>
+                        <td class="ancho-rotulo-especial titulo">Tiempo de Residencia</td>
+                        <td class="ancho" colspan="4" rowspan="2"></td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Propia <input type="checkbox"></td>
+                        <td class="valor"></td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Propia Hipotecada: <input type="checkbox"></td>
+                        <td class="valor"></td>
+                        <td class="titulo ancho-rotulo-especial">Inst Financiera:</td>
+                        <td class="valor"></td>
+                        <td class="titulo ancho-rotulo-especial">Valor Hipoteca:</td>
+                        <td class="valor"></td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Arrendada: <input type="checkbox"></td>
+                        <td class="valor"></td>
+                        <td class="titulo">Nombre arrendatario:</td>
+                        <td class="valor"></td>
+                        <td class="titulo">Teléfono:</td>
+                        <td class="valor"></td>
+                    </tr>
+                    <tr>
+                        <td class="titulo">Vive con Familiares: <input type="checkbox"></td>
+                        <td class="ancho-vacio valor"></td>
+                        <td class="titulo">Nombre familiar:</td>
+                        <td class="ancho-vacio valor"></td>
+                        <td class="titulo">Teléfono:</td>
+                        <td class="ancho-vacio valor"></td>
+                    </tr>
+                </table>            
+            </div>
+            <div class="row rotulo mt-2">
+                <h6>3. ACTIVIDAD ECONÓMICA</h6>
+            </div>
+            <div class="row">
+                <div class="col titulo">Profesión/Ocupación:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Sector Laboral:</div>
+                <div class="col valor">
+                    <div class="row">
+                        <div class="col">
+                            <label for="">Público
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                        <div class="col">
+                            <label for="">Privado
+                                <input type="checkbox">
+                            </label>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col centrar titulo">DESCRIPCIÓN DE LA ACTIVIDAD</div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">RELACIÓN DE DEPENDENCIA</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Nombre de la empresa:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Cargo:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo doble">Dirección de la Empresa:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Actividad de la Empresa:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Antiguedad en su trabajo:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Teléfono:</div>
+                        <div class="col valor"></div>
+                        <div class="col titulo">E-mail:</div>
+                        <div class="col valor"></div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">NEGOCIO PROPIO</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Nombre del negocio:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Antigüedad del negocio:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col col-4 titulo">Teléfono del negocio:</div>
+                        <div class="col col-3 valor"></div>
+                        <div class="col col-2 titulo">Fax:</div>
+                        <div class="col col-3 valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">E-mail:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo doble">Actividad del negocio:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Dirección del negocio:</div>
+                        <div class="col valor"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col titulo">En caso de tener ingresos diferentes a los originados de las actividades antes descritas, indicar la fuente:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row rotulo mt-2">
+                <h6>4. DATOS DEL CÓNYUGE O CONVIVIENTE</h6>
+            </div>
+            <div class="row">
+                <div class="col titulo">Nombres y Apellidos</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Nacionalidad:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Lugar y fecha de nacimiento:</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col col-2 titulo">Nivel de Educación</div>
+                <div class="col col-5 valor">
+                    <label for="">Primaria
+                        <input type="checkbox" name="" id="">
+                    </label>
+                    <label for="">Secundaria
+                        <input type="checkbox" name="" id="">
+                    </label>
+                    <label for="">Técnica
+                        <input type="checkbox" name="" id="">
+                    </label>
+                    <label for="">Superior
+                        <input type="checkbox" name="" id="">
+                    </label>
+                    <label for="">Postgrado
+                        <input type="checkbox" name="" id="">
+                    </label>
+                    <label for="">Doctorado
+                        <input type="checkbox" name="" id="">
+                    </label>
+                    <label for="">Ninguna
+                        <input type="checkbox" name="" id="">
+                    </label>
+                </div>
+                <div class="col col-2 titulo">CI/Pasaporte</div>
+                <div class="col col-3 valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Nombre de la empresa:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Actividad de la empresa</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Cargo:</div>
+                <div class="col valor"></div>
+                <div class="col titulo">Antigüedad</div>
+                <div class="col valor"></div>
+            </div>
+            <div class="row">
+                <div class="col col-3 titulo pt-3">Dirección de la empresa:</div>
+                <div class="col col-3 valor"></div>
+                <div class="col col-6">
+                    <div class="row">
+                        <div class="col titulo">Teléfono de la empresa:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Teléfono Domicilio/celular:</div>
+                        <div class="col valor"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">E-mail:</div>
+                        <div class="col valor"></div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rotulo mt-2">
+                <h6>5. SITUACIÓN FINANCIERA</h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <label class="centrar titulo">INGRESOS MENSUALES</label>
+                    <div class="row">
+                        <div class="col">&nbsp;</div>
+                        <div class="col titulo centrar">TITULAR</div>
+                        <div class="col titulo centrar">CÓNYUGE</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Sueldo/salario</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Honorarios profesionales</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Comisiones/Bonos/Dividendos</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Utilidades/Acciones</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Arriendos</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Ventas/Negocio Propio</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Otros</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col total titulo">Total Ingresos</div>
+                        <div class="col centrar valor">$0.00</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <label class="centrar titulo">PROMEDIO GASTOS MENSUALES</label>
+                    <div class="row">
+                        <div class="col titulo">Alimentación</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo letras">Vivienda(Arriendo, Alícuota, servicio doméstico):</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Servicios Básicos(Luz, Agua, Teléfono):</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Vestimenta:</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Salud:</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Transporte:</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Educación:</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Costos y gastos Negocio Propio:</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col total titulo">Promedio gastos mensuales:</div>
+                        <div class="col centrar valor">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">ACTIVOS</div>
+                    </div>
+                    <div class="row">
+                        <div class="col letras titulo">Efectivo, Depósito Bancos y Cooperativas:</div>
+                        <div class="col valor centrar">$0.00</div>
+
+                        <div class="col letras titulo">Inversiones (Pólizas, Depósitos a plazo, etc.):</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col letras titulo">Letras o documentos por cobrar:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col letras titulo">Mercaderías (Al precio de costo actual):</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Bienes Inmuebles:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Vehículos:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Muebles y Enseres:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Otros activos:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo total">Total:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">PASIVOS</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo pt-2">Obligaciones bancarias (corto plazo):</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Tarjetas de crédito:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Cuentas por pagar:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Otros (corto plazo):</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Préstamos a largo plazo:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Coop. Multiempresarial:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo">Otros (largo plazo):</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo total">Total:</div>
+                        <div class="col valor centrar">$0.00</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col titulo total">
+                    Patrimonio (Activo - Pasivo)
+                </div>
+                <div class="col valor centrar">
+                    $0.00
+                </div>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="titulo">BIENES RAICES DE SU PROPIEDAD. En caso de necesitar más renglones, favor adjuntar una hoja adicional
+                        al presente formulario.</label>
+                    <div class="row">
+                        <div class="col-2">
+                            <div class="row">
+                                <div class="col titulo centrar">Tipo de Propiedad</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-4">
+                            <div class="row">
+                                <div class="col titulo centrar">Dirección de la Propiedad
+                                    <span class="titulo">(Incluir código catastral)</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col titulo centrar">Valor de mercado</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col titulo centrar">¿Está hipotecado?</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row mt-2">
+                <div class="col">
+                    <label class="titulo">VEHÍCULOS DE SU PROPIEDAD. En caso de necesitar más renglones, favor adjuntar una hoja adicional al presente
+                        formulario.</label>
+                    <div class="row">
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col titulo centrar">Modelo</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="row">
+                                <div class="col titulo centrar">Año</span>
+                                </div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="row">
+                                <div class="col titulo centrar">Placa</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-3">
+                            <div class="row">
+                                <div class="col titulo centrar">Valor de mercado</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col-2">
+                            <div class="row">
+                                <div class="col titulo centrar">¿Está prendado?</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div class="row rotulo mt-2">
+                <h6>6. DETALLE DE ÚLTIMAS OBRAS. Aplicable para la actualización</h6>
+            </div>
+            <div class="row mt-2">
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo">Nombre de la Obra</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo">Año</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo">Valor contrato</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo letras-nueve">Institución que otorgó la garantía</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo">Estado de Obra / Orgánica</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row rotulo mt-2">
+                <h6>7. REFERENCIAS</h6>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="titulo centrar">BANCARIAS: CTA CORRIENTE/CTA AHORROS/FONDOS INVERSIÓN</div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="row">
+                                <div class="col titulo">Institución</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col titulo">Tipo de cuenta</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col titulo">No. de Cuenta</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                        <div class="col">
+                            <div class="row">
+                                <div class="col titulo">Fecha verificado</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                            <div class="row">
+                                <div class="col valor">&nbsp;</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">COMERCIALES</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo centrar">
+                            Almacén o Proveedor
+                        </div>
+                        <div class="col titulo centrar">
+                            Teléfono
+                        </div>
+                        <div class="col titulo centrar">
+                            Dirección
+                        </div>
+                        <div class="col titulo centrar">
+                            Nombre de contacto
+                        </div>
+                        <div class="col titulo centrar">
+                            Fecha verificado
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">PERSONALES (No incluir familiares)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo centrar">
+                            Nombre y Apellido
+                        </div>
+                        <div class="col titulo centrar">
+                            Relación
+                        </div>
+                        <div class="col titulo centrar">
+                            Teléfono
+                        </div>
+                        <div class="col titulo centrar">
+                            Celular
+                        </div>
+                        <div class="col titulo centrar">
+                            Nombre de contacto
+                        </div>
+                        <div class="col titulo centrar">
+                            Fecha verificado
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <div class="row">
+                        <div class="col titulo centrar">FAMILIARES (Necesariamente una referencia familiar)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col titulo centrar">
+                            Nombre y Apellido
+                        </div>
+                        <div class="col titulo centrar">
+                            Relación
+                        </div>
+                        <div class="col titulo centrar">
+                            Teléfono
+                        </div>
+                        <div class="col titulo centrar">
+                            Celular
+                        </div>
+                        <div class="col titulo centrar">
+                            Nombre de contacto
+                        </div>
+                        <div class="col titulo centrar">
+                            Fecha verificado
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                    <div class="row">
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                        <div class="col valor">&nbsp;</div>
+                    </div>
+                </div>
+            </div>
+            <div class="row titulo centrar">CROQUIS DIRECCIÓN DOMICILIO</div>
+            <div class="row">
+                <div class="col titulo">Calle principal y número:</div>
+                <div class="col valor">&nbsp;</div>
+                <div class="col titulo">Sector:</div>
+                <div class="col valor">&nbsp;</div>
+            </div>
+            <div class="row">
+                <div class="col titulo">Calle secundaria:</div>
+                <div class="col valor">&nbsp;</div>
+                <div class="col titulo">Referencia:</div>
+                <div class="col valor">&nbsp;</div>
+            </div>
+            <div class="row mt-2" ng-show="false">
+                <button class="btn btn-primary btn-sm" type="submit">Imprimir</button>
+            </div>
+        </form>
+        <script src="lib/popper.js/dist/umd/popper.min.js"></script>
+        <script src="lib/jquery/dist/jquery.min.js"></script>
+        <script src="lib/bootstrap/dist/js/bootstrap.min.js"></script>
+
+        <script src="angular/angular.min.js"></script>
+        <script src="js/Chart.min.js"></script>
+        <script src="js/angular-chart.min.js"></script>
+
+
+        <script src="js/main.js"></script>
+        <script src="js/printer.js"></script>
 </body>
 
 </html>
